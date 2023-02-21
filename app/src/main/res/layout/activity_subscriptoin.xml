@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SubscriptoinActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="Choose your \nsubscription plan"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="6dp"
+        android:text="And get a 7-day free trial"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutYearly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/back_plane"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+
+        <ImageView
+            android:id="@+id/background_year"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/back_plane"
+            android:backgroundTint="#E8E6E9"
+            android:visibility="invisible"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/custum_radio_selector"
+
+            android:button="@drawable/custum_radio_normal"
+            android:gravity="center"
+
+            android:onClick="ChechkBoxYear"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/inter"
+
+            android:text="Yearly"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintStart_toEndOf="@+id/checkbox1"
+            app:layout_constraintTop_toTopOf="@+id/checkbox1"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:fontFamily="@font/inter"
+            android:text="-66% discount"
+            android:textColor="#538A55"
+            app:layout_constraintBottom_toBottomOf="@+id/checkbox1"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="18dp"
+            android:src="@drawable/ic_baseline_euro_24"
+            app:layout_constraintBottom_toBottomOf="@+id/textView9"
+            app:layout_constraintEnd_toStartOf="@+id/textView_amount_yearly"
+            app:layout_constraintTop_toTopOf="@+id/textView_amount_yearly" />
+
+        <TextView
+            android:id="@+id/textView_amount_yearly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="90.10"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="every year"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView_amount_yearly"
+            app:layout_constraintTop_toBottomOf="@+id/textView_amount_yearly" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/back_star"
+        android:backgroundTint="#1E7C22"
+        android:padding="100dp"
+
+        android:src="@drawable/star"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayoutYearly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayoutYearly"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayoutYearly"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/constraintLayoutMonthly"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/back_plane"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutYearly">
+
+        <ImageView
+            android:id="@+id/background_monthly"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/back_plane"
+            android:backgroundTint="#E8E6E9"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+
+            android:background="@drawable/custum_radio_selector"
+            android:button="@drawable/custum_radio_normal"
+            android:gravity="center"
+            android:onClick="CheckBoxMonthly"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/text_year"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/inter"
+
+            android:text="Monthly"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/text"
+            app:layout_constraintStart_toEndOf="@+id/checkbox2"
+            app:layout_constraintTop_toTopOf="@+id/checkbox2"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:fontFamily="@font/inter"
+            android:text="-66% discount"
+            android:textColor="#538A55"
+            app:layout_constraintBottom_toBottomOf="@+id/checkbox2"
+            app:layout_constraintStart_toStartOf="@+id/text_year"
+            app:layout_constraintTop_toBottomOf="@+id/text_year"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="18dp"
+            android:src="@drawable/ic_baseline_euro_24"
+            app:layout_constraintBottom_toBottomOf="@+id/textView11"
+            app:layout_constraintEnd_toStartOf="@+id/text_amount_monthly"
+            app:layout_constraintTop_toTopOf="@+id/text_amount_monthly" />
+
+        <TextView
+            android:id="@+id/text_amount_monthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="90.10"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="every month"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/text_amount_monthly"
+            app:layout_constraintTop_toBottomOf="@+id/text_amount_monthly" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:id="@+id/imageFilterButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/back_star"
+        android:backgroundTint="#1E7C22"
+        android:padding="200dp"
+        android:src="@drawable/star"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayoutMonthly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayoutMonthly" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/constraintLayoutweekly"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/back_plane"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMonthly">
+
+
+        <ImageView
+            android:id="@+id/backgroundweekly"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/back_plane"
+            android:backgroundTint="#E3E1E4"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/custum_radio_selector"
+            android:button="@drawable/custum_radio_normal"
+            android:gravity="center"
+            android:onClick="ChechkBoxWeekly"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/text_year1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+
+            android:fontFamily="@font/inter"
+            android:text="Weekly"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkbox3"
+            app:layout_constraintTop_toTopOf="@+id/checkbox3"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="MissingConstraints" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="18dp"
+            android:src="@drawable/ic_baseline_euro_24"
+            app:layout_constraintBottom_toBottomOf="@+id/textView111"
+            app:layout_constraintEnd_toStartOf="@+id/text_amount_weekly"
+            app:layout_constraintTop_toTopOf="@+id/text_amount_weekly" />
+
+        <TextView
+            android:id="@+id/text_amount_weekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="90.10"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView111"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView111"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="every week"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/text_amount_weekly"
+            app:layout_constraintTop_toBottomOf="@+id/text_amount_weekly" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:id="@+id/imageFilterButton12"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/back_star"
+        android:backgroundTint="#1E7C22"
+        android:layout_marginEnd="2dp"
+        android:padding="200dp"
+        android:src="@drawable/star"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayoutweekly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayoutweekly" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail_yearly"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+
+        android:background="@drawable/back_plane"
+        android:backgroundTint="#F6F5F8"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutweekly">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="You'll get:"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:drawableLeft="@drawable/star_green"
+            android:drawablePadding="10dp"
+            android:text="Ad Free Interface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+
+            android:drawableLeft="@drawable/star_green"
+            android:drawablePadding="10dp"
+            android:text="10 Bids Per Day"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+
+            android:layout_marginBottom="16dp"
+            android:drawableLeft="@drawable/star_green"
+            android:drawablePadding="10dp"
+            android:text="5 Job Request per Month"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail_monthly"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        android:background="@drawable/back_plane"
+        android:backgroundTint="#F6F5F8"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_subscribe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutweekly"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView132"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="You'll get:"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView144"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:drawableLeft="@drawable/star_green"
+            android:drawablePadding="10dp"
+            android:text="Unlimited access"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView132" />
+
+        <TextView
+            android:id="@+id/textView101"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+
+            android:drawableLeft="@drawable/star_green"
+            android:drawablePadding="10dp"
+            android:text="10 Bids Per Day"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView144" />
+
+        <TextView
+            android:id="@+id/textView121"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+
+            android:layout_marginBottom="16dp"
+            android:drawableLeft="@drawable/star_green"
+            android:drawablePadding="10dp"
+            android:text="Sync all your devices"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView101" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail_weekly"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        android:background="@drawable/back_plane"
+        android:backgroundTint="#F6F5F8"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_subscribe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutweekly"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView_weekly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="You'll get:"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView1444"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:drawableLeft="@drawable/star_green"
+            android:drawablePadding="10dp"
+            android:text="Unlimited access"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_weekly" />
+
+        <TextView
+            android:id="@+id/textView1011"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+
+            android:drawableLeft="@drawable/star_green"
+            android:drawablePadding="10dp"
+            android:text="10 Bids Per Day"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1444" />
+
+        <TextView
+            android:id="@+id/textView1211"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+
+            android:layout_marginBottom="16dp"
+            android:drawableLeft="@drawable/star_green"
+            android:drawablePadding="10dp"
+            android:text="Sync all your devices"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1011" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_subscribe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/back_plane"
+        android:backgroundTint="#1DE925"
+
+        android:padding="8dp"
+        android:text="Subscribe"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
